@@ -40,6 +40,26 @@ from .revision import (
     preserve,
     replace,
 )
+from .blocking import (
+    BlockingError,
+    BlockingScore,
+    ColumnCell,
+    OccupancySpan,
+    parse_score,
+)
+from .wardrobe import (
+    Assignment,
+    Blocker,
+    CastingConflict,
+    CostumeChange,
+    PlanningInput,
+    PlanningResult,
+    Segment,
+    Worker,
+    build_input,
+    solve,
+    verify_plan,
+)
 
 __all__ = [
     "MODE_SINGLE",
@@ -74,4 +94,20 @@ __all__ = [
     "Version",
     "preserve",
     "replace",
+    "BlockingError",
+    "BlockingScore",
+    "ColumnCell",
+    "OccupancySpan",
+    "parse_score",
+    "Assignment",
+    "Blocker",
+    "CastingConflict",
+    "CostumeChange",
+    "PlanningInput",
+    "PlanningResult",
+    "Segment",
+    "Worker",
+    "build_input",
+    "solve",
+    "verify_plan",
 ]

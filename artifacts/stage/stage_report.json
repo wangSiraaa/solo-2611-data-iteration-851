@@ -1,0 +1,1873 @@
+{
+  "scenario_1_worked_example": {
+    "library_versions": [
+      {
+        "version_id": 0,
+        "text": "A...B.\nC...D."
+      },
+      {
+        "version_id": 1,
+        "text": "A...B.\nC....D"
+      }
+    ],
+    "scores": [
+      {
+        "version_id": 0,
+        "widths": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "boundaries": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "horizon": 6,
+        "roles": [
+          "P",
+          "Q"
+        ],
+        "grid": [
+          [
+            "A",
+            ".",
+            ".",
+            ".",
+            "B",
+            "."
+          ],
+          [
+            "C",
+            ".",
+            ".",
+            ".",
+            "D",
+            "."
+          ]
+        ],
+        "spans": [
+          {
+            "role": "P",
+            "costume": "A",
+            "interval": [
+              0,
+              1
+            ],
+            "columns": [
+              0,
+              1
+            ],
+            "cells": [
+              {
+                "column": 0,
+                "char": "A",
+                "byte_range": [
+                  0,
+                  1
+                ],
+                "byte_count": 1
+              }
+            ]
+          },
+          {
+            "role": "P",
+            "costume": "B",
+            "interval": [
+              4,
+              5
+            ],
+            "columns": [
+              4,
+              5
+            ],
+            "cells": [
+              {
+                "column": 4,
+                "char": "B",
+                "byte_range": [
+                  4,
+                  5
+                ],
+                "byte_count": 1
+              }
+            ]
+          },
+          {
+            "role": "Q",
+            "costume": "C",
+            "interval": [
+              0,
+              1
+            ],
+            "columns": [
+              0,
+              1
+            ],
+            "cells": [
+              {
+                "column": 0,
+                "char": "C",
+                "byte_range": [
+                  7,
+                  8
+                ],
+                "byte_count": 1
+              }
+            ]
+          },
+          {
+            "role": "Q",
+            "costume": "D",
+            "interval": [
+              4,
+              5
+            ],
+            "columns": [
+              4,
+              5
+            ],
+            "cells": [
+              {
+                "column": 4,
+                "char": "D",
+                "byte_range": [
+                  11,
+                  12
+                ],
+                "byte_count": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "version_id": 1,
+        "widths": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "boundaries": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "horizon": 6,
+        "roles": [
+          "P",
+          "Q"
+        ],
+        "grid": [
+          [
+            "A",
+            ".",
+            ".",
+            ".",
+            "B",
+            "."
+          ],
+          [
+            "C",
+            ".",
+            ".",
+            ".",
+            ".",
+            "D"
+          ]
+        ],
+        "spans": [
+          {
+            "role": "P",
+            "costume": "A",
+            "interval": [
+              0,
+              1
+            ],
+            "columns": [
+              0,
+              1
+            ],
+            "cells": [
+              {
+                "column": 0,
+                "char": "A",
+                "byte_range": [
+                  0,
+                  1
+                ],
+                "byte_count": 1
+              }
+            ]
+          },
+          {
+            "role": "P",
+            "costume": "B",
+            "interval": [
+              4,
+              5
+            ],
+            "columns": [
+              4,
+              5
+            ],
+            "cells": [
+              {
+                "column": 4,
+                "char": "B",
+                "byte_range": [
+                  4,
+                  5
+                ],
+                "byte_count": 1
+              }
+            ]
+          },
+          {
+            "role": "Q",
+            "costume": "C",
+            "interval": [
+              0,
+              1
+            ],
+            "columns": [
+              0,
+              1
+            ],
+            "cells": [
+              {
+                "column": 0,
+                "char": "C",
+                "byte_range": [
+                  7,
+                  8
+                ],
+                "byte_count": 1
+              }
+            ]
+          },
+          {
+            "role": "Q",
+            "costume": "D",
+            "interval": [
+              5,
+              6
+            ],
+            "columns": [
+              5,
+              6
+            ],
+            "cells": [
+              {
+                "column": 5,
+                "char": "D",
+                "byte_range": [
+                  12,
+                  13
+                ],
+                "byte_count": 1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "plans": {
+      "v0_original_two_min_changes": {
+        "feasible": true,
+        "minimum_workers": 2,
+        "used_worker_ids": [
+          "W1",
+          "W2"
+        ],
+        "assignments": [
+          {
+            "change_id": 0,
+            "worker_id": "W1",
+            "interval": [
+              1,
+              3
+            ]
+          },
+          {
+            "change_id": 1,
+            "worker_id": "W2",
+            "interval": [
+              1,
+              3
+            ]
+          }
+        ],
+        "blockers": []
+      },
+      "v1_revised_q": {
+        "feasible": true,
+        "minimum_workers": 1,
+        "used_worker_ids": [
+          "W1"
+        ],
+        "assignments": [
+          {
+            "change_id": 0,
+            "worker_id": "W1",
+            "interval": [
+              1,
+              3
+            ]
+          },
+          {
+            "change_id": 1,
+            "worker_id": "W1",
+            "interval": [
+              3,
+              5
+            ]
+          }
+        ],
+        "blockers": []
+      },
+      "v0_original_cd_one_minute": {
+        "feasible": true,
+        "minimum_workers": 1,
+        "used_worker_ids": [
+          "W1"
+        ],
+        "assignments": [
+          {
+            "change_id": 0,
+            "worker_id": "W1",
+            "interval": [
+              1,
+              3
+            ]
+          },
+          {
+            "change_id": 1,
+            "worker_id": "W1",
+            "interval": [
+              3,
+              4
+            ]
+          }
+        ],
+        "blockers": []
+      }
+    },
+    "inputs": {
+      "v0": {
+        "score_version_id": 0,
+        "horizon": 6,
+        "casting": {
+          "PA": [
+            "P"
+          ],
+          "QB": [
+            "Q"
+          ]
+        },
+        "timelines": {
+          "PA": [
+            {
+              "role": "P",
+              "costume": "A",
+              "interval": [
+                0,
+                1
+              ],
+              "columns": [
+                0,
+                1
+              ]
+            },
+            {
+              "role": "P",
+              "costume": "B",
+              "interval": [
+                4,
+                5
+              ],
+              "columns": [
+                4,
+                5
+              ]
+            }
+          ],
+          "QB": [
+            {
+              "role": "Q",
+              "costume": "C",
+              "interval": [
+                0,
+                1
+              ],
+              "columns": [
+                0,
+                1
+              ]
+            },
+            {
+              "role": "Q",
+              "costume": "D",
+              "interval": [
+                4,
+                5
+              ],
+              "columns": [
+                4,
+                5
+              ]
+            }
+          ]
+        },
+        "changes": [
+          {
+            "change_id": 0,
+            "actor": "PA",
+            "from_role": "P",
+            "to_role": "P",
+            "from_costume": "A",
+            "to_costume": "B",
+            "window": [
+              1,
+              4
+            ],
+            "duration": 2
+          },
+          {
+            "change_id": 1,
+            "actor": "QB",
+            "from_role": "Q",
+            "to_role": "Q",
+            "from_costume": "C",
+            "to_costume": "D",
+            "window": [
+              1,
+              4
+            ],
+            "duration": 2
+          }
+        ]
+      },
+      "v1": {
+        "score_version_id": 1,
+        "horizon": 6,
+        "casting": {
+          "PA": [
+            "P"
+          ],
+          "QB": [
+            "Q"
+          ]
+        },
+        "timelines": {
+          "PA": [
+            {
+              "role": "P",
+              "costume": "A",
+              "interval": [
+                0,
+                1
+              ],
+              "columns": [
+                0,
+                1
+              ]
+            },
+            {
+              "role": "P",
+              "costume": "B",
+              "interval": [
+                4,
+                5
+              ],
+              "columns": [
+                4,
+                5
+              ]
+            }
+          ],
+          "QB": [
+            {
+              "role": "Q",
+              "costume": "C",
+              "interval": [
+                0,
+                1
+              ],
+              "columns": [
+                0,
+                1
+              ]
+            },
+            {
+              "role": "Q",
+              "costume": "D",
+              "interval": [
+                5,
+                6
+              ],
+              "columns": [
+                5,
+                6
+              ]
+            }
+          ]
+        },
+        "changes": [
+          {
+            "change_id": 0,
+            "actor": "PA",
+            "from_role": "P",
+            "to_role": "P",
+            "from_costume": "A",
+            "to_costume": "B",
+            "window": [
+              1,
+              4
+            ],
+            "duration": 2
+          },
+          {
+            "change_id": 1,
+            "actor": "QB",
+            "from_role": "Q",
+            "to_role": "Q",
+            "from_costume": "C",
+            "to_costume": "D",
+            "window": [
+              1,
+              5
+            ],
+            "duration": 2
+          }
+        ]
+      }
+    }
+  },
+  "scenario_2_tilde_and_pair": {
+    "library_versions": [
+      {
+        "version_id": 0,
+        "text": "A~~~.一.\n.一~~..."
+      },
+      {
+        "version_id": 1,
+        "text": "B~~~.一.\n.一~~..."
+      },
+      {
+        "version_id": 2,
+        "text": "丁~~~.一.\n.一~~..."
+      }
+    ],
+    "scores": [
+      {
+        "version_id": 0,
+        "widths": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "boundaries": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "horizon": 7,
+        "roles": [
+          "R",
+          "S"
+        ],
+        "grid": [
+          [
+            "A",
+            "~",
+            "~",
+            "~",
+            ".",
+            "一",
+            "."
+          ],
+          [
+            ".",
+            "一",
+            "~",
+            "~",
+            ".",
+            ".",
+            "."
+          ]
+        ],
+        "spans": [
+          {
+            "role": "R",
+            "costume": "A",
+            "interval": [
+              0,
+              4
+            ],
+            "columns": [
+              0,
+              4
+            ],
+            "cells": [
+              {
+                "column": 0,
+                "char": "A",
+                "byte_range": [
+                  0,
+                  1
+                ],
+                "byte_count": 1
+              },
+              {
+                "column": 1,
+                "char": "~",
+                "byte_range": [
+                  1,
+                  2
+                ],
+                "byte_count": 1
+              },
+              {
+                "column": 2,
+                "char": "~",
+                "byte_range": [
+                  2,
+                  3
+                ],
+                "byte_count": 1
+              },
+              {
+                "column": 3,
+                "char": "~",
+                "byte_range": [
+                  3,
+                  4
+                ],
+                "byte_count": 1
+              }
+            ]
+          },
+          {
+            "role": "R",
+            "costume": "一",
+            "interval": [
+              5,
+              6
+            ],
+            "columns": [
+              5,
+              6
+            ],
+            "cells": [
+              {
+                "column": 5,
+                "char": "一",
+                "byte_range": [
+                  7,
+                  9
+                ],
+                "byte_count": 2
+              }
+            ]
+          },
+          {
+            "role": "S",
+            "costume": "一",
+            "interval": [
+              1,
+              4
+            ],
+            "columns": [
+              1,
+              4
+            ],
+            "cells": [
+              {
+                "column": 1,
+                "char": "一",
+                "byte_range": [
+                  16,
+                  18
+                ],
+                "byte_count": 2
+              },
+              {
+                "column": 2,
+                "char": "~",
+                "byte_range": [
+                  20,
+                  21
+                ],
+                "byte_count": 1
+              },
+              {
+                "column": 3,
+                "char": "~",
+                "byte_range": [
+                  21,
+                  22
+                ],
+                "byte_count": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "version_id": 1,
+        "widths": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "boundaries": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "horizon": 7,
+        "roles": [
+          "R",
+          "S"
+        ],
+        "grid": [
+          [
+            "B",
+            "~",
+            "~",
+            "~",
+            ".",
+            "一",
+            "."
+          ],
+          [
+            ".",
+            "一",
+            "~",
+            "~",
+            ".",
+            ".",
+            "."
+          ]
+        ],
+        "spans": [
+          {
+            "role": "R",
+            "costume": "B",
+            "interval": [
+              0,
+              4
+            ],
+            "columns": [
+              0,
+              4
+            ],
+            "cells": [
+              {
+                "column": 0,
+                "char": "B",
+                "byte_range": [
+                  0,
+                  1
+                ],
+                "byte_count": 1
+              },
+              {
+                "column": 1,
+                "char": "~",
+                "byte_range": [
+                  1,
+                  2
+                ],
+                "byte_count": 1
+              },
+              {
+                "column": 2,
+                "char": "~",
+                "byte_range": [
+                  2,
+                  3
+                ],
+                "byte_count": 1
+              },
+              {
+                "column": 3,
+                "char": "~",
+                "byte_range": [
+                  3,
+                  4
+                ],
+                "byte_count": 1
+              }
+            ]
+          },
+          {
+            "role": "R",
+            "costume": "一",
+            "interval": [
+              5,
+              6
+            ],
+            "columns": [
+              5,
+              6
+            ],
+            "cells": [
+              {
+                "column": 5,
+                "char": "一",
+                "byte_range": [
+                  7,
+                  9
+                ],
+                "byte_count": 2
+              }
+            ]
+          },
+          {
+            "role": "S",
+            "costume": "一",
+            "interval": [
+              1,
+              4
+            ],
+            "columns": [
+              1,
+              4
+            ],
+            "cells": [
+              {
+                "column": 1,
+                "char": "一",
+                "byte_range": [
+                  16,
+                  18
+                ],
+                "byte_count": 2
+              },
+              {
+                "column": 2,
+                "char": "~",
+                "byte_range": [
+                  20,
+                  21
+                ],
+                "byte_count": 1
+              },
+              {
+                "column": 3,
+                "char": "~",
+                "byte_range": [
+                  21,
+                  22
+                ],
+                "byte_count": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "version_id": 2,
+        "widths": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "boundaries": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "horizon": 7,
+        "roles": [
+          "R",
+          "S"
+        ],
+        "grid": [
+          [
+            "丁",
+            "~",
+            "~",
+            "~",
+            ".",
+            "一",
+            "."
+          ],
+          [
+            ".",
+            "一",
+            "~",
+            "~",
+            ".",
+            ".",
+            "."
+          ]
+        ],
+        "spans": [
+          {
+            "role": "R",
+            "costume": "丁",
+            "interval": [
+              0,
+              4
+            ],
+            "columns": [
+              0,
+              4
+            ],
+            "cells": [
+              {
+                "column": 0,
+                "char": "丁",
+                "byte_range": [
+                  2,
+                  4
+                ],
+                "byte_count": 2
+              },
+              {
+                "column": 1,
+                "char": "~",
+                "byte_range": [
+                  6,
+                  7
+                ],
+                "byte_count": 1
+              },
+              {
+                "column": 2,
+                "char": "~",
+                "byte_range": [
+                  7,
+                  8
+                ],
+                "byte_count": 1
+              },
+              {
+                "column": 3,
+                "char": "~",
+                "byte_range": [
+                  8,
+                  9
+                ],
+                "byte_count": 1
+              }
+            ]
+          },
+          {
+            "role": "R",
+            "costume": "一",
+            "interval": [
+              5,
+              6
+            ],
+            "columns": [
+              5,
+              6
+            ],
+            "cells": [
+              {
+                "column": 5,
+                "char": "一",
+                "byte_range": [
+                  12,
+                  14
+                ],
+                "byte_count": 2
+              }
+            ]
+          },
+          {
+            "role": "S",
+            "costume": "一",
+            "interval": [
+              1,
+              4
+            ],
+            "columns": [
+              1,
+              4
+            ],
+            "cells": [
+              {
+                "column": 1,
+                "char": "一",
+                "byte_range": [
+                  21,
+                  23
+                ],
+                "byte_count": 2
+              },
+              {
+                "column": 2,
+                "char": "~",
+                "byte_range": [
+                  25,
+                  26
+                ],
+                "byte_count": 1
+              },
+              {
+                "column": 3,
+                "char": "~",
+                "byte_range": [
+                  26,
+                  27
+                ],
+                "byte_count": 1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "dangling_tilde": [
+      {
+        "offset": 0,
+        "end_offset": 1,
+        "row": 0,
+        "column": 0
+      },
+      {
+        "offset": 13,
+        "end_offset": 14,
+        "row": 1,
+        "column": 5
+      }
+    ]
+  },
+  "scenario_3_double_cast": {
+    "library_versions": [
+      {
+        "version_id": 0,
+        "text": "A....B....C....D.\n......E..F.......\n...X........Y...."
+      }
+    ],
+    "widths": [
+      2,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "score": {
+      "version_id": 0,
+      "widths": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "boundaries": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "horizon": 19,
+      "roles": [
+        "P",
+        "Q",
+        "R"
+      ],
+      "grid": [
+        [
+          "A",
+          ".",
+          ".",
+          ".",
+          ".",
+          "B",
+          ".",
+          ".",
+          ".",
+          ".",
+          "C",
+          ".",
+          ".",
+          ".",
+          ".",
+          "D",
+          "."
+        ],
+        [
+          ".",
+          ".",
+          ".",
+          ".",
+          ".",
+          ".",
+          "E",
+          ".",
+          ".",
+          "F",
+          ".",
+          ".",
+          ".",
+          ".",
+          ".",
+          ".",
+          "."
+        ],
+        [
+          ".",
+          ".",
+          ".",
+          "X",
+          ".",
+          ".",
+          ".",
+          ".",
+          ".",
+          ".",
+          ".",
+          ".",
+          "Y",
+          ".",
+          ".",
+          ".",
+          "."
+        ]
+      ],
+      "spans": [
+        {
+          "role": "P",
+          "costume": "A",
+          "interval": [
+            0,
+            2
+          ],
+          "columns": [
+            0,
+            1
+          ],
+          "cells": [
+            {
+              "column": 0,
+              "char": "A",
+              "byte_range": [
+                0,
+                1
+              ],
+              "byte_count": 1
+            }
+          ]
+        },
+        {
+          "role": "P",
+          "costume": "B",
+          "interval": [
+            6,
+            7
+          ],
+          "columns": [
+            5,
+            6
+          ],
+          "cells": [
+            {
+              "column": 5,
+              "char": "B",
+              "byte_range": [
+                5,
+                6
+              ],
+              "byte_count": 1
+            }
+          ]
+        },
+        {
+          "role": "P",
+          "costume": "C",
+          "interval": [
+            12,
+            13
+          ],
+          "columns": [
+            10,
+            11
+          ],
+          "cells": [
+            {
+              "column": 10,
+              "char": "C",
+              "byte_range": [
+                10,
+                11
+              ],
+              "byte_count": 1
+            }
+          ]
+        },
+        {
+          "role": "P",
+          "costume": "D",
+          "interval": [
+            17,
+            18
+          ],
+          "columns": [
+            15,
+            16
+          ],
+          "cells": [
+            {
+              "column": 15,
+              "char": "D",
+              "byte_range": [
+                15,
+                16
+              ],
+              "byte_count": 1
+            }
+          ]
+        },
+        {
+          "role": "Q",
+          "costume": "E",
+          "interval": [
+            7,
+            9
+          ],
+          "columns": [
+            6,
+            7
+          ],
+          "cells": [
+            {
+              "column": 6,
+              "char": "E",
+              "byte_range": [
+                24,
+                25
+              ],
+              "byte_count": 1
+            }
+          ]
+        },
+        {
+          "role": "Q",
+          "costume": "F",
+          "interval": [
+            11,
+            12
+          ],
+          "columns": [
+            9,
+            10
+          ],
+          "cells": [
+            {
+              "column": 9,
+              "char": "F",
+              "byte_range": [
+                27,
+                28
+              ],
+              "byte_count": 1
+            }
+          ]
+        },
+        {
+          "role": "R",
+          "costume": "X",
+          "interval": [
+            4,
+            5
+          ],
+          "columns": [
+            3,
+            4
+          ],
+          "cells": [
+            {
+              "column": 3,
+              "char": "X",
+              "byte_range": [
+                39,
+                40
+              ],
+              "byte_count": 1
+            }
+          ]
+        },
+        {
+          "role": "R",
+          "costume": "Y",
+          "interval": [
+            14,
+            15
+          ],
+          "columns": [
+            12,
+            13
+          ],
+          "cells": [
+            {
+              "column": 12,
+              "char": "Y",
+              "byte_range": [
+                48,
+                49
+              ],
+              "byte_count": 1
+            }
+          ]
+        }
+      ]
+    },
+    "input": {
+      "score_version_id": 0,
+      "horizon": 19,
+      "casting": {
+        "甲": [
+          "P",
+          "R"
+        ],
+        "乙": [
+          "Q"
+        ]
+      },
+      "timelines": {
+        "甲": [
+          {
+            "role": "P",
+            "costume": "A",
+            "interval": [
+              0,
+              2
+            ],
+            "columns": [
+              0,
+              1
+            ]
+          },
+          {
+            "role": "R",
+            "costume": "X",
+            "interval": [
+              4,
+              5
+            ],
+            "columns": [
+              3,
+              4
+            ]
+          },
+          {
+            "role": "P",
+            "costume": "B",
+            "interval": [
+              6,
+              7
+            ],
+            "columns": [
+              5,
+              6
+            ]
+          },
+          {
+            "role": "P",
+            "costume": "C",
+            "interval": [
+              12,
+              13
+            ],
+            "columns": [
+              10,
+              11
+            ]
+          },
+          {
+            "role": "R",
+            "costume": "Y",
+            "interval": [
+              14,
+              15
+            ],
+            "columns": [
+              12,
+              13
+            ]
+          },
+          {
+            "role": "P",
+            "costume": "D",
+            "interval": [
+              17,
+              18
+            ],
+            "columns": [
+              15,
+              16
+            ]
+          }
+        ],
+        "乙": [
+          {
+            "role": "Q",
+            "costume": "E",
+            "interval": [
+              7,
+              9
+            ],
+            "columns": [
+              6,
+              7
+            ]
+          },
+          {
+            "role": "Q",
+            "costume": "F",
+            "interval": [
+              11,
+              12
+            ],
+            "columns": [
+              9,
+              10
+            ]
+          }
+        ]
+      },
+      "changes": [
+        {
+          "change_id": 0,
+          "actor": "乙",
+          "from_role": "Q",
+          "to_role": "Q",
+          "from_costume": "E",
+          "to_costume": "F",
+          "window": [
+            9,
+            11
+          ],
+          "duration": 2
+        },
+        {
+          "change_id": 1,
+          "actor": "甲",
+          "from_role": "P",
+          "to_role": "R",
+          "from_costume": "A",
+          "to_costume": "X",
+          "window": [
+            2,
+            4
+          ],
+          "duration": 1
+        },
+        {
+          "change_id": 2,
+          "actor": "甲",
+          "from_role": "R",
+          "to_role": "P",
+          "from_costume": "X",
+          "to_costume": "B",
+          "window": [
+            5,
+            6
+          ],
+          "duration": 1
+        },
+        {
+          "change_id": 3,
+          "actor": "甲",
+          "from_role": "P",
+          "to_role": "P",
+          "from_costume": "B",
+          "to_costume": "C",
+          "window": [
+            7,
+            12
+          ],
+          "duration": 4
+        },
+        {
+          "change_id": 4,
+          "actor": "甲",
+          "from_role": "P",
+          "to_role": "R",
+          "from_costume": "C",
+          "to_costume": "Y",
+          "window": [
+            13,
+            14
+          ],
+          "duration": 1
+        },
+        {
+          "change_id": 5,
+          "actor": "甲",
+          "from_role": "R",
+          "to_role": "P",
+          "from_costume": "Y",
+          "to_costume": "D",
+          "window": [
+            15,
+            17
+          ],
+          "duration": 1
+        }
+      ]
+    },
+    "plans": {
+      "broken_shift_two_workers": {
+        "feasible": true,
+        "minimum_workers": 2,
+        "used_worker_ids": [
+          "W1",
+          "W2"
+        ],
+        "assignments": [
+          {
+            "change_id": 0,
+            "worker_id": "W1",
+            "interval": [
+              9,
+              11
+            ]
+          },
+          {
+            "change_id": 1,
+            "worker_id": "W1",
+            "interval": [
+              2,
+              3
+            ]
+          },
+          {
+            "change_id": 2,
+            "worker_id": "W1",
+            "interval": [
+              5,
+              6
+            ]
+          },
+          {
+            "change_id": 3,
+            "worker_id": "W2",
+            "interval": [
+              7,
+              11
+            ]
+          },
+          {
+            "change_id": 4,
+            "worker_id": "W1",
+            "interval": [
+              13,
+              14
+            ]
+          },
+          {
+            "change_id": 5,
+            "worker_id": "W1",
+            "interval": [
+              15,
+              16
+            ]
+          }
+        ],
+        "blockers": []
+      },
+      "only_broken_shift_worker": {
+        "feasible": false,
+        "minimum_workers": null,
+        "used_worker_ids": [],
+        "assignments": [],
+        "blockers": [
+          {
+            "kind": "no_worker_covers_window",
+            "message": "#0 '乙' 'E'->'F' (Q->Q) window [9,11), 2 min: no on-duty interval covers the whole job; shifts are W1: [0,9), [13,19)",
+            "change_id": 0,
+            "details": {
+              "window": [
+                9,
+                11
+              ],
+              "duration": 2,
+              "workers": [
+                "W1: [0,9), [13,19)"
+              ]
+            }
+          },
+          {
+            "kind": "no_worker_covers_window",
+            "message": "#3 '甲' 'B'->'C' (P->P) window [7,12), 4 min: no on-duty interval covers the whole job; shifts are W1: [0,9), [13,19)",
+            "change_id": 3,
+            "details": {
+              "window": [
+                7,
+                12
+              ],
+              "duration": 4,
+              "workers": [
+                "W1: [0,9), [13,19)"
+              ]
+            }
+          }
+        ]
+      },
+      "one_full_day_worker": {
+        "feasible": false,
+        "minimum_workers": null,
+        "used_worker_ids": [],
+        "assignments": [],
+        "blockers": [
+          {
+            "kind": "candidate_dressers",
+            "message": "#0 '乙' 'E'->'F' (Q->Q) window [9,11), 2 min: candidate dressers ['W2']",
+            "change_id": 0,
+            "details": {
+              "window": [
+                9,
+                11
+              ],
+              "duration": 2,
+              "candidate_worker_ids": [
+                "W2"
+              ]
+            }
+          },
+          {
+            "kind": "candidate_dressers",
+            "message": "#1 '甲' 'A'->'X' (P->R) window [2,4), 1 min: candidate dressers ['W2']",
+            "change_id": 1,
+            "details": {
+              "window": [
+                2,
+                4
+              ],
+              "duration": 1,
+              "candidate_worker_ids": [
+                "W2"
+              ]
+            }
+          },
+          {
+            "kind": "candidate_dressers",
+            "message": "#2 '甲' 'X'->'B' (R->P) window [5,6), 1 min: candidate dressers ['W2']",
+            "change_id": 2,
+            "details": {
+              "window": [
+                5,
+                6
+              ],
+              "duration": 1,
+              "candidate_worker_ids": [
+                "W2"
+              ]
+            }
+          },
+          {
+            "kind": "candidate_dressers",
+            "message": "#3 '甲' 'B'->'C' (P->P) window [7,12), 4 min: candidate dressers ['W2']",
+            "change_id": 3,
+            "details": {
+              "window": [
+                7,
+                12
+              ],
+              "duration": 4,
+              "candidate_worker_ids": [
+                "W2"
+              ]
+            }
+          },
+          {
+            "kind": "candidate_dressers",
+            "message": "#4 '甲' 'C'->'Y' (P->R) window [13,14), 1 min: candidate dressers ['W2']",
+            "change_id": 4,
+            "details": {
+              "window": [
+                13,
+                14
+              ],
+              "duration": 1,
+              "candidate_worker_ids": [
+                "W2"
+              ]
+            }
+          },
+          {
+            "kind": "candidate_dressers",
+            "message": "#5 '甲' 'Y'->'D' (R->P) window [15,17), 1 min: candidate dressers ['W2']",
+            "change_id": 5,
+            "details": {
+              "window": [
+                15,
+                17
+              ],
+              "duration": 1,
+              "candidate_worker_ids": [
+                "W2"
+              ]
+            }
+          },
+          {
+            "kind": "single_dresser_contention",
+            "message": "changes #0 and #3 have overlapping windows and only dresser 'W2' can cover either",
+            "change_id": null,
+            "details": {
+              "changes": [
+                0,
+                3
+              ],
+              "windows": [
+                [
+                  9,
+                  11
+                ],
+                [
+                  7,
+                  12
+                ]
+              ],
+              "worker": "W2"
+            }
+          },
+          {
+            "kind": "no_schedule_found",
+            "message": "exhaustive search over every dresser subset found no collision-free placement; the candidate_dressers/single_dresser_contention records above are the binding window and shift constraints",
+            "change_id": null,
+            "details": {}
+          }
+        ]
+      },
+      "conflicting_casting": {
+        "feasible": false,
+        "minimum_workers": null,
+        "used_worker_ids": [],
+        "assignments": [],
+        "blockers": [
+          {
+            "kind": "casting_conflict",
+            "message": "actor '甲' double-booked on P/'A' [0,2) cols [0,2) and Q/'B' [1,3) cols [1,3); overlap [1,2)",
+            "change_id": null,
+            "details": {
+              "actor": "甲",
+              "overlap": [
+                1,
+                2
+              ]
+            }
+          },
+          {
+            "kind": "window_too_short",
+            "message": "#0 '甲' 'A'->'B' (P->Q) window [2,1), 1 min: window is only -1 min",
+            "change_id": 0,
+            "details": {
+              "window": [
+                2,
+                1
+              ],
+              "duration": 1
+            }
+          }
+        ]
+      },
+      "missing_worktime": {
+        "feasible": false,
+        "minimum_workers": null,
+        "used_worker_ids": [],
+        "assignments": [],
+        "blockers": [
+          {
+            "kind": "missing_worktime",
+            "message": "no worktime on file for 'B'->'C' needed by '甲'",
+            "change_id": 3,
+            "details": {
+              "window": [
+                7,
+                12
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}
